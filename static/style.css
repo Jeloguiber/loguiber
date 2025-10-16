@@ -1,0 +1,94 @@
+/* ---------- Create Story Section ---------- */
+#create-story {
+    margin-top: 140px; /* pushes content below fixed header */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#create-story h2 {
+    font-family: 'Playfair Display', serif;
+    color: #b0005d;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* ---------- Story Form ---------- */
+.story-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-form label {
+    font-weight: 600;
+    font-size: 18px;
+    color: #4a004a;
+    align-self: flex-start;
+}
+
+.story-form input,
+.story-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.story-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.story-form button {
+    padding: 12px 30px;
+    background-color: #d63384;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.story-form button:hover {
+    background-color: #ff4da6;
+    transform: scale(1.05);
+}
+
+/* ---------- Published Story Output ---------- */
+.story-output {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.story-output h2 {
+    color: #b0005d;
+    margin-bottom: 10px;
+}
+
+.story-output h4 {
+    color: #4a004a;
+    margin-bottom: 20px;
+}
+
+.story-output p {
+    color: #333;
+    line-height: 1.6;
+}

@@ -109,11 +109,11 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/')
+@app.route('/create')
 def create():
     return render_template('create.html')
 
-@app.route('/')
+@app.route('/library')
 def library():
     return render_template('library.html')
 
