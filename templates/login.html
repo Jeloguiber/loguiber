@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Wabb{% endblock %}
+
+{% block body %}
+<div class="login-container">
+    <h2>Login to Wabb</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="Enter your username" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <p class="hint">Try logging in with <b>author</b> / <b>password123</b></p>
+</div>
+{% endblock %}
+

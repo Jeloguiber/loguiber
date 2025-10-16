@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabb | Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wabb</div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('create') }}">Create</a>
+        <a href="{{ url-for('library') }}">Library</a>
+
+        </nav>
+    </header>
+
+    <section id="library">
+        <h2>Your Story Library</h2>
+        <div class="library-container" id="library-list">
+            <!-- Example Story Card -->
+            <div class="story-card">
+                <h3>The Silent Dawn</h3>
+                <p class="author">by Alina Cruz</p>
+                <p class="preview">A world drowned in silence hides secrets only the brave dare to uncover...</p>
+                <button onclick="readStory('The Silent Dawn', 'Alina Cruz', 'A world drowned in silence hides secrets only the brave dare to uncover... Full story content goes here.')">Read More</button>
+            </div>
+
+            <div class="story-card">
+                <h3>Shadows of the Hallway</h3>
+                <p class="author">by Lucien Reyes</p>
+                <p class="preview">When night falls, Section D’s hallway tells stories of the past...</p>
+                <button onclick="readStory('Shadows of the Hallway', 'Lucien Reyes', 'When night falls, Section D’s hallway tells stories of the past... Full story content goes here.')">Read More</button>
+            </div>
+        </div>
+
+        <div id="story-viewer" class="story-output" style="display:none;">
+            <button class="back-btn" onclick="backToLibrary()">← Back to Library</button>
+            <h2 id="view-title"></h2>
+            <h4 id="view-author"></h4>
+            <p id="view-content"></p>
+        </div>
+    </section>
+
+    <script>
+        function readStory(title, author, content) {
+            document.getElementById('library-list').style.display = 'none';
+            document.getElementById('story-viewer').style.display = 'block';
+            document.getElementById('view-title').textContent = title;
+            document.getElementById('view-author').textContent = "by " + author;
+            document.getElementById('view-content').textContent = content;
+        }
+
+        function backToLibrary() {
+            document.getElementById('story-viewer').style.display = 'none';
+            document.getElementById('library-list').style.display = 'grid';
+        }
+    </script>
+
+</body>
+</html>

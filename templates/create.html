@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wabb | Share Your Stories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+
+    <header>
+    <div class="logo">Wabb</div>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('create') }}">Create</a>
+        <a href="#">Library</a>
+    </nav>
+</header>
+
+  <button>Get Started</button>
+
+    <section id="create-story">
+        <h2>Create Your Story</h2>
+        <form class="story-form">
+            <label for="author">Author Name:</label>
+            <input type="text" id="author" placeholder="Enter your name">
+
+            <label for="title">Story Title:</label>
+            <input type="text" id="title" placeholder="Enter story title">
+
+            <label for="chapter">Chapters:</label>
+            <textarea id="chapter" placeholder="Write your story chapters here..."></textarea>
+
+            <button type="button" onclick="publishStory()">Publish Story</button>
+        </form>
+
+
+        <div id="published-story" class="story-output" style="display:none;">
+            <h2 id="output-title"></h2>
+            <h4 id="output-author"></h4>
+            <h3>Chapters</h3>
+            <p id="output-chapter"></p>
+        </div>
+    </section>
+
+    <script>
+        function scrollToCreate() {
+            document.getElementById("create-story").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function publishStory() {
+            const author = document.getElementById('author').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const chapter = document.getElementById('chapter').value.trim();
+
+            if (!author || !title || !chapter) {
+                alert("Please fill in all fields before publishing!");
+                return;
+            }
+
+            document.getElementById('output-title').textContent = title;
+            document.getElementById('output-author').textContent = "by " + author;
+            document.getElementById('output-chapter').textContent = chapter;
+
+            document.querySelector('.story-form').style.display = 'none';
+            document.getElementById('published-story').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
