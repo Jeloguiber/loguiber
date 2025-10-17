@@ -64,12 +64,12 @@ function publishStory() {
     reader.onload = function(event) {
         const photoData = event.target.result;
 
-        // Save story (with image) to localStorage
+        
         let stories = JSON.parse(localStorage.getItem('stories')) || [];
         stories.push({ title, author, chapter, photo: photoData });
         localStorage.setItem('stories', JSON.stringify(stories));
 
-        // Display story preview
+        
         document.getElementById('output-title').textContent = title;
         document.getElementById('output-author').textContent = "by " + author;
         document.getElementById('output-chapter').textContent = chapter;
