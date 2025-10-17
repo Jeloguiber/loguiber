@@ -1,18 +1,18 @@
-/* ---------- Reset ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ---------- Body ---------- */
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fbe4ec; /* light pink tone */
+    background: #fbe4ec; 
     overflow-x: hidden;
 }
 
-/* ---------- Header ---------- */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -49,7 +49,7 @@ header nav a:hover {
     color: #d63384;
 }
 
-/* ---------- Landing Section ---------- */
+
 .landing {
     height: 100vh;
     background: url("book3.jpg") no-repeat center/cover;
@@ -60,7 +60,7 @@ header nav a:hover {
     padding-top: 80px;
 }
 
-/* soft light-pink overlay */
+
 .landing::before {
     content: "";
     position: absolute;
@@ -71,7 +71,7 @@ header nav a:hover {
     left: 0;
 }
 
-/* ---------- Text Box ---------- */
+
 .text-box {
     position: relative;
     text-align: center;
