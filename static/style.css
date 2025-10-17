@@ -1,6 +1,6 @@
-/* ---------- Create Story Section ---------- */
+
 #create-story {
-    margin-top: 140px; /* pushes content below fixed header */
+    margin-top: 140px; 
     padding: 40px 20px;
     text-align: center;
 }
@@ -12,7 +12,7 @@
     margin-bottom: 30px;
 }
 
-/* ---------- Story Form ---------- */
+
 .story-form {
     display: flex;
     flex-direction: column;
@@ -65,7 +65,6 @@
     transform: scale(1.05);
 }
 
-/* ---------- Published Story Output ---------- */
 .story-output {
     margin-top: 40px;
     background: rgba(255, 255, 255, 0.8);
